@@ -86,32 +86,58 @@ nav{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: ;
     height: 46px;
 }
 
 h2{
     font-size: 64px;
 }
+
+div{
+    padding: 0px;
+}
+ 
 .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 400px;
-    padding-top: 390px;
-    padding-left: 133px;
-    grid-auto-rows: minmax(100px, auto);
+    height: 300px;
+    padding-top: 300px;
+    padding-left: 150px;
+    grid-auto-rows: minmax(200px, auto);
 }
 .timer-header li{
     
     display: inline-block;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 40px;
     padding: 5px;
 }
 
+sub{
+    font-size: 15px;
+}
+
 footer{
-    position: fixed;
-    top: 916px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 900px;
     height: 108px;
     width: 100%;
     background-color: #16169A;
+}
+
+p{
+    margin: auto;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.logo-tec{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 36px;
 }
