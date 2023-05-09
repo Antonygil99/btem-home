@@ -29,20 +29,21 @@
     <div class="container">
         <div class="column">
             <ul class="timer-header">
-                <li><h2 id="day">22<sub>D</sub></h2></li>
-                <li><h2 id="hour">14<sub>H</sub></h2></li>
-                <li><h2 id="minute">58<sub>M</sub></h2></li>
-                <li><h2 id="seconds">12<sub>S</sub></h2></li>
+                <li><h2 id="days"></h2></li><li><sub>D</sub></li>
+
+                <li><h2 id="hours"></h2></li><li><sub>H</sub></li>
+                <li><h2 id="minutes"></h2></li><li><sub>M</sub></li>
+                <li><h2 id="seconds"></h2></li><li><sub>S</sub></li>
             </ul>
             
             <p class="text-white">¡Bienvenid@ a la Experiencia BTEM!</p>
             <button class="board">PASS BOARD</button>
-            <button class="discord">ACCEDE A DISCORD</button>
+            <button class="discord" onclick="location.href='https://discord.com/invite/FE2f2tXJKt'" type="button">ACCEDE A DISCORD</button>
             
         </div>
 
         <div class="column">
-            <img src="img/To the stars-rafiki 1.png" class="" alt="logo-btem">
+            <img src="img/To the stars-rafiki 1.png" class="box" alt="logo-btem">
         </div>
     </div>
     <footer>
@@ -50,16 +51,17 @@
     </footer>
 </body>
 <script>
-    
+document.addEventListener('DOMContentLoaded', () => { 
+
 //===
 // VARIABLES
 //===
-const DATE_TARGET = new Date('04/13/2020 0:01 AM');
+const DATE_TARGET = new Date('05/27/2023 0:01 AM');
 // DOM for render
-const SPAN_DAYS = document.querySelector('span#days');
-const SPAN_HOURS = document.querySelector('span#hours');
-const SPAN_MINUTES = document.querySelector('span#minutes');
-const SPAN_SECONDS = document.querySelector('span#seconds');
+const SPAN_DAYS = document.querySelector('h2#days');
+const SPAN_HOURS = document.querySelector('h2#hours');
+const SPAN_MINUTES = document.querySelector('h2#minutes');
+const SPAN_SECONDS = document.querySelector('h2#seconds');
 // Milliseconds for the calculations
 const MILLISECONDS_OF_A_SECOND = 1000;
 const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
@@ -71,8 +73,8 @@ const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
 //===
 
 /**
- * Method that updates the countdown and the sample
- */
+* Method that updates the countdown and the sample
+*/
 function updateCountdown() {
     // Calcs
     const NOW = new Date()
@@ -96,5 +98,6 @@ function updateCountdown() {
 updateCountdown();
 // Refresh every second
 setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+});
 </script>
 </html>

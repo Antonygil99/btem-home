@@ -91,6 +91,7 @@ nav{
 
 h2{
     font-size: 64px;
+    
 }
 
 div{
@@ -108,13 +109,21 @@ div{
 .timer-header li{
     
     display: inline-block;
-    margin: 20px;
+    margin-right: 0px;
+    margin-left: 20px;
+    padding-right: 0px;
     font-size: 40px;
-    padding: 5px;
+    font-weight: bolder;
+    padding: 3px;
 }
 
 sub{
-    font-size: 15px;
+
+    font-size: 18px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-weight: 900;
+    color: azure;
 }
 
 footer{
@@ -132,6 +141,7 @@ p{
     margin: auto;
     padding: 20px;
     font-size: 24px;
+    font-weight: 900;
 }
 
 .logo-tec{
@@ -170,3 +180,34 @@ button:hover{
     border: 1px solid #FFFFFF;
     box-shadow: #000B21;
 }
+
+.box{
+    counter-increment:_item;
+    animation: scale-in-center infinite; 
+    animation-duration: 4s;
+}
+.box::after{
+    content: counter(_item);
+  }
+
+  @keyframes scale-in-center {
+    0% {
+      transform: perspective(250px)
+        rotateX(5deg)
+        translateY(-10%)
+        translateZ(0);
+      
+    }
+    50% {
+      transform: scale(1);
+     
+    }
+    100% {
+        transform: perspective(250px)
+          rotateX(5deg)
+          translateY(-10%)
+          translateZ(0);
+        
+      }
+  }
+  
